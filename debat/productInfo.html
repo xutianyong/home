@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>您身边最全面的金融服务</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/info.css"/>
+   <!-- <script type="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+    <style>
+    	.mui-popup-input input{
+    		height: 35px;
+    		border-radius: 5px;
+    	}
+    	#menu{
+    		color: #fff;
+    		margin-top: 5px;
+    	}
+    	#menu img{
+    		    width: 24px;
+    height: 24px;
+    	}
+    	.mui-bar-nav{
+    		box-shadow:none;
+    	}
+    	.layui-m-layercont{
+    		text-align: left!important;
+    	}
+    	.sharett p{
+    		font-size: 12px;
+    	}
+    </style>
+    
+</head>
+<body>
+	<!--<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">-->
+		<!--侧滑菜单部分-->
+		<!--<aside id="offCanvasSide" class="mui-off-canvas-left">
+			<div class="btn-group" style="text-align: center;margin-top: 50%;">
+				<span class="btn" style="background:#dd524d;" onclick="logout()">退出登录</span>
+			</div>
+		</aside>-->
+		<!--侧滑菜单部分-->
+	<!--<div class="mui-inner-wrap">-->
+	<header class="mui-bar mui-bar-nav">
+	  <a class="sb-back back" style="cursor: pointer;" href="#" onclick="backTo()" title="返回"></a>
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left backbtn" onclick="backTo()" title="Back"></a>-->
+		<a id="menu" class="mui-action-menu mui-icon mui-pull-right" href="#topPopover">
+			<img src="img/share.png" ><!--onclick="shareWeb()"-->
+		</a>
+		<h1 class="mui-title productName"></h1>
+	</header>
+	<!--id="offCanvasContentScroll"   mui-scroll-wrapper-->
+	<div class="mui-content">
+			<div class="topsub">
+				<img src="">
+					<div class="tb-fr-info">
+						<div class="line-1 line-4">
+							<h3 class="productionName"></h3>
+							<!--<p><span>3.7万</span>人申请</p>-->
+						</div>
+						<div class="line-2 line-5">
+							<span class="productionTitle"></span>
+							<!--<span class="productionSubTitle"></span>
+							<span class="productionKey"></span>-->
+							<!--<span class="isHot">热销产品</span>-->
+						</div>
+					</div>
+			</div>
+			<div class="line-3">
+				<ul>
+					<li>
+						<p>最高额度</p>
+						<p class="maxmun"></p>
+					</li>
+					<li>
+						<p>日费率</p>
+						<p class="rate"></p>
+					</li>
+					<li>
+						<p>借款期限</p>
+						<p class="term"></p>
+					</li>
+				</ul>
+			</div>
+			<h4 style="padding: 11px 15px;">产品描述：</h4>
+			<div class="productionDesc">
+				
+			</div>
+			<div id="qrcode" style="text-align: center;"></div>
+			<div class="btn-group">
+			<span class="btn" style="cursor: pointer;" id="applySubmit">立即申请</span>
+		</div>
+	</div>
+		<div id="topPopover" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="weichat">
+						<p style="margin-bottom: 10px;">分享到</p>
+						<div class="sharett">
+							<span style="display: inline-block;" onclick="doShareq(1)">
+								<img src="img/weichat.png">
+								<p style="text-align: center;">微信</p>
+								</span>&nbsp;&nbsp;&nbsp;&nbsp;
+								<span style="display: inline-block;" onclick="doShareq(2)">
+									<img src="img/fri.png" style="width: 36px;height: 36px;">
+								<p>朋友圈</p>
+								</span>
+						</div>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+	<!--</div>-->
+	<!--</div>-->
+	<input id="sharecontent" type="hidden" value="">
+	<input id="protitle" type="hidden" value="">
+		<input id="proname" type="hidden" value="">
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="layer_mobile/layer.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/common.js"></script>
+<script src="js/productInfo.js"></script>
+      <script type="text/javascript">
+var shares=null;
+var sweixin=null;
+var buttons=[
+  {title:'微信',extra:{scene:'WXSceneSession'}},
+  {title:'朋友圈',extra:{scene:'WXSceneTimeline'}}
+  /*{title:'我的收藏',extra:{scene:'WXSceneFavorite'}}*/
+];
+// H5 plus事件处理
+function plusReady(){
+	updateSerivces();
+}
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener('plusready', plusReady, false);
+}
+/**
+ * 更新分享服务
+ */
+function updateSerivces(){
+	plus.share.getServices(function(s){
+		shares={};
+		for(var i in s){
+			var t=s[i];
+			shares[t.id]=t;
+		}
+    sweixin=shares['weixin'];
+	}, function(e){
+		outSet('获取分享服务列表失败：'+e.message);
+	});
+}
+
+
+// 分享网页
+function shareWeb(){
+  var msg={type:'web',thumbs:['_www/logo.png']};
+ 
+  /*msg.href=$("#sharecontent").val();*/
+ msg.href="http://www.baidu.com"
+  
+  msg.title="saher";
+  msg.content="content";
+  sweixin?plus.nativeUI.actionSheet(
+  	{cancel:'取消',buttons:buttons},
+  	function(e){
+  	(e.index>0)&&share(sweixin, msg, buttons[e.index-1]);
+  }):plus.nativeUI.alert('当前环境不支持微信分享操作!'); 
+}
+/*title:'分享网页到微信',*/
+// 分享
+function share(srv, msg, button){
+  if(!srv){
+    alert('无效的分享服务！');
+    return;
+  }
+  button&&(msg.extra=button.extra);
+	// 发送分享
+	if(srv.authenticated){
+		//alert('---已授权---');
+		doShare(srv, msg);
+	}else{
+		//alert('---未授权---');
+		srv.authorize(function(){
+			doShare(srv, msg);
+		}, function(e){
+			outLine('认证授权失败：'+JSON.stringify(e));
+		});
+	}  
+}
+// 发送分享
+function doShare(srv, msg){
+	
+	//alert(JSON.stringify(srv));
+	//alert(JSON.stringify(msg));
+	srv.send(msg, function(){
+		alert('分享到"'+srv.description+'"成功！');
+	}, function(e){
+		alert('分享到"'+srv.description+'"失败: '+JSON.stringify(e));
+	});
+}
+
+function doShareq(zx){
+	//alert(1);
+if(zx==1){/*_www/logo.png*/
+	var msg={type:'web',thumbs:['img/thumb.png'],extra:{scene:'WXSceneSession'}};
+  msg.href=$("#sharecontent").val();
+  msg.title=$("#proname").val();
+  msg.content=$("#protitle").val();
+}else{/*_www/logo.png*/
+	var msg={type:'web',thumbs:['img/thumb'],extra:{scene:'WXSceneTimeline'}};
+  msg.href=$("#sharecontent").val();
+  msg.title=$("#proname").val();
+  msg.content=$("#protitle").val();
+}
+//alert(JSON.stringify(msg));
+	var srv=sweixin;
+	srv.send(msg, function(){
+		alert('分享到"'+srv.description+'"成功！');
+	}, function(e){
+		alert('分享到"'+srv.description+'"失败: '+JSON.stringify(e));
+	});
+}
+// 解除授权
+function cancelAuth(){
+	//alert('解除授权：');
+  if(sweixin){
+    if(sweixin.authenticated){
+    	alert('取消"'+sweixin.description+'"');
+    }
+    sweixin.forbid();
+  }else{
+    alert('当前环境不支持微信分享操作!');
+  }
+}
+
+
+
+
+		</script> 		
+</html>

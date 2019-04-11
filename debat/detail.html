@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>您身边最全面的金融服务</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/info.css"/>
+   <!-- <script type="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+    <style>
+    	.mui-popup-input input{
+    		height: 35px;
+    		border-radius: 5px;
+    	}
+    	#menu{
+    		color: #fff;
+    		margin-top: 5px;
+    	}
+    	#menu img{
+    		    width: 24px;
+    			height: 24px;
+    	}
+    	.mui-bar-nav{
+    		box-shadow:none;
+    	}
+    	.layui-m-layercont{
+    		text-align: left!important;
+    	}
+    </style>
+    
+</head>
+<body>
+	<!--<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">-->
+		<!--侧滑菜单部分-->
+		<!--<aside id="offCanvasSide" class="mui-off-canvas-left">
+			<div class="btn-group" style="text-align: center;margin-top: 50%;">
+				<span class="btn" style="background:#dd524d;" onclick="logout()">退出登录</span>
+			</div>
+		</aside>-->
+		<!--侧滑菜单部分-->
+	<!--<div class="mui-inner-wrap">-->
+	<header class="mui-bar mui-bar-nav">
+	 <!-- <a class="sb-back back" href="#" onclick="backTo()" title="返回"></a>-->
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left backbtn" onclick="backTo()" title="Back"></a>-->
+		<!--<a id="menu" class="mui-action-menu mui-icon mui-pull-right" href="#topPopover">
+			<img src="img/share.png" >
+		</a>-->
+		<h1 class="mui-title productName"></h1>
+	</header>
+	<!--id="offCanvasContentScroll"   mui-scroll-wrapper-->
+	<div class="mui-content">
+			<div class="topsub">
+				<img src="">
+					<div class="tb-fr-info">
+						<div class="line-1 line-4">
+							<h3 class="productionName"></h3>
+							<!--<p><span>3.7万</span>人申请</p>-->
+						</div>
+						<div class="line-2 line-5">
+							<span class="productionTitle"></span>
+							<!--<span class="productionSubTitle"></span>
+							<span class="productionKey"></span>-->
+							<!--<span class="isHot">热销产品</span>-->
+						</div>
+					</div>
+			</div>
+			<div class="line-3">
+				<ul>
+					<li>
+						<p>最高额度</p>
+						<p class="maxmun"></p>
+					</li>
+					<li>
+						<p>日费率</p>
+						<p class="rate"></p>
+					</li>
+					<li>
+						<p>借款期限</p>
+						<p class="term"></p>
+					</li>
+				</ul>
+			</div>
+			<h4 style="padding: 11px 15px;">产品描述：</h4>
+			<div class="productionDesc">
+				
+			</div>
+			<!--<div id="qrcode" style="text-align: center;"></div>-->
+			<div class="btn-group">
+			<span class="btn" style="cursor: pointer;" id="applySubmit">立即申请</span>
+		</div>
+	</div>
+	<!--</div>-->
+	<!--</div>-->
+</body>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/mui.min.js"></script>-->
+<script src="layer_mobile/layer.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/common.js"></script>
+<script src="js/detail.js"></script>		
+</html>

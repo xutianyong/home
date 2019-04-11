@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>您身边最全面的金融服务</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+   <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <style>
+    	.copybtn{
+    		text-align: center;
+			color: #fff;
+			padding: 10px 0;
+			border-radius: 3px;
+			margin: 30px auto 20px auto;
+			width: 80%;
+			background: #5461EB;
+			font-size: 16px;
+    	}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left backbtn"></a>-->
+		<a class="sb-back back" style="cursor: pointer;" href="#" onclick="backTo()" title="返回"></a>
+		<!--<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a>-->
+		<!--<h1 class="mui-title">钱易融</h1>-->
+		<h1 class="mui-title">易借宝</h1>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view linkList">
+			<!--<li class="mui-table-view-cell">
+				<p>产品名称</p>
+				<p>链接地址</p>
+			</li>
+			<li class="mui-table-view-cell">
+				<p>产品名称</p>
+				<p>链接地址</p>
+			</li>
+			<li class="mui-table-view-cell">
+				<p>产品名称</p>
+				<p>链接地址</p>
+			</li>-->
+		</ul>
+		<input type="hidden" name="" id="link" value=""/>
+		<div class="nodata" style="margin-top:50%; margin-bottom:30%;text-align:center;font-size:30px">暂无数据!</div>
+		<div class="copybtn" style="cursor: pointer;" onclick="copyShareUrl()">一键复制</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="layer_mobile/layer.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/sharehref.js"></script>
+</body>
+</html>

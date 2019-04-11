@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="layer_mobile/need/layer.css" rel="stylesheet" />
+		
+		<style>
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			.mui-btn {
+				padding: 10px;
+			}
+			.mui-input-row label{
+				width: 25%;
+			}
+			.mui-input-row label~input{
+				float: none;
+			}
+			input[type="checkbox"]{
+				    width: 20px;
+			    height: 20px;
+			    vertical-align: sub;
+			}
+			.logo{
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.logo > img{
+			    zoom: 10%;
+			    border-radius: 100%;
+			}
+			.inpt input{
+				/*width: 80%;*/
+				border-radius: 10px;
+				height: 55px;
+				line-height: 55px;
+				
+			}
+			.inpt{
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			/*.inpt label{
+				width: 90px;
+			}*/
+			/*#verifycode{
+				width: calc(100% - 200px);
+			}*/
+			#registerbtn{
+				width:80%;
+				background: #fff;
+				color: #000;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				margin-left: auto;
+				margin-right: auto;
+				cursor: pointer;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			.tipbg{
+				height: 100%;
+				display: none;
+			}
+			.tipbg img{
+				position: absolute;
+			    left: 0;
+			    top: 0;
+			    bottom: 0;
+			    right: 0;
+			    zoom: 90%;
+			    width: 100%;
+			    height: 100%;
+			}
+		</style>
+	</head>
+	<body style="background: url(img/bg.png) no-repeat;width: 100%; background-size:cover ;">
+		<div class="mui-content" style="margin-top: 50%; background: none;">
+			<!--<div class="logo"><img src="img/logo_hd.png"></div>-->
+			<form id='login-form' style="padding: 11px 15px;"><!--class="mui-input-group"-->
+				<div class="inpt"><!--mui-input-row-->
+					<!--<label>手机号码：</label>-->
+					<input id='phoneNumber' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号">
+				</div>
+				<!--<div class="inpt">
+					<label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+					<input id='pwd' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+				</div>
+				<div class="inpt">
+					<label>验&nbsp;&nbsp;证&nbsp;&nbsp;码：</label>
+					<input type="text" class="input-code" id="verifycode" placeholder="请输入验证码" style="float: none;width: 180px;">
+  					<span class="code"  title='点击切换' style="float: right;line-height: 55px;border-radius: 5px;"></span>
+				</div>
+				<div class="" style="padding-top: 11px;display: none;">
+					<input type="checkbox" class="mui-checkbox" checked="true">&nbsp;&nbsp;<a href="javascript:void(0);" class="agree">同意协议</a>
+				</div>-->
+			</form>
+				<div class="mui-content-padded">
+				<button id='registerbtn' class="mui-btn mui-btn-block mui-btn-primary">申请借款</button>
+				</div>
+			</div>
+		</div>
+		<div class="tipbg"><img src="img/timg.jpg"></div>
+		<script src="js/jquery.min.js"></script>
+		<!--<script src="js/mui.min.js"></script>-->
+		<script src="layer_mobile/layer.js"></script>
+		<!--<script src="js/jquery.code.js"></script>-->
+		<script src="js/base64.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/register1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+{
+  "main.html": {
+    "resources": [
+      "img/three_2.png",
+      "css/index.css",
+      "js/jquery.min.js",
+      "img/three_1.png",
+      "css/swiper.min.css",
+      "css/mui.min.css",
+      "js/swiper.min.js",
+      "productInfo.html",
+      "fonts/mui.ttf",
+      "js/main.js",
+      "img/slider/e02c171b296f1771.jpg",
+      "js/mui.min.js",
+      "img/slider/ae8f4b5bce95c89c.jpg",
+      "login.html",
+      "img/slider/2f24cf96ab082e3d.jpg",
+      "img/slider/ed7f7b1de5a151a2.jpg",
+      "js/common.js",
+      "img/slider/img_2.jpg",
+      "layer_mobile/layer.js",
+      "layer_mobile/need/layer.css",
+      "img/slider/img_4.jpg",
+      "img/slider/img_3.png",
+      "img/slider/img_1.jpg",
+      "register.html",
+      "img/sharehref.png",
+      "sharehref.html",
+      "img/hot.png",
+      "link.html",
+      "download.html",
+      "img/down.png",
+      "img/zixun.png",
+      "img/help.png",
+      "connect.html",
+      "help.html",
+      "iconfont/iconfont.css"
+    ],
+    "refer": [
+      "productInfo.html",
+      "login.html",
+      "register.html",
+      "sharehref.html",
+      "link.html",
+      "download.html",
+      "connect.html",
+      "help.html"
+    ]
+  },
+  "productInfo.html": {
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.qrcode.min.js",
+      "css/index.css",
+      "js/jquery.min.js",
+      "img/three_1.png",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "layer_mobile/need/layer.css",
+      "layer_mobile/layer.js",
+      "main.html",
+      "js/productInfo.js",
+      "js/common.js",
+      "img/back.png",
+      "css/info.css",
+      "img/weichat.png",
+      "img/share.png",
+      "img/fri.png",
+      "js/base64.js",
+      "link.html",
+      "sharehref.html"
+    ],
+    "refer": [
+      "main.html",
+      "link.html",
+      "sharehref.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "main.html",
+      "js/jquery.min.js",
+      "js/jquery.code.js",
+      "css/mui.min.css",
+      "layer_mobile/need/layer.css",
+      "layer_mobile/layer.js",
+      "js/login.js",
+      "js/common.js",
+      "img/logo_hd.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  },
+  "link.html": {
+    "resources": [
+      "css/mui.min.css",
+      "img/back.png",
+      "css/info.css",
+      "main.html",
+      "productInfo.html"
+    ],
+    "refer": [
+      "main.html",
+      "productInfo.html"
+    ]
+  },
+  "register.html": {
+    "resources": [
+      "layer_mobile/need/layer.css",
+      "img/logo_hd.png",
+      "js/register.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "layer_mobile/layer.js",
+      "js/jquery.code.js",
+      "main.html",
+      "js/base64.js",
+      "img/bg.png"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  },
+  "sharehref.html": {
+    "resources": [
+      "css/index.css",
+      "layer_mobile/need/layer.css",
+      "productInfo.html",
+      "css/mui.min.css",
+      "js/sharehref.js",
+      "main.html",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "layer_mobile/layer.js"
+    ],
+    "refer": [
+      "productInfo.html",
+      "main.html"
+    ]
+  },
+  "download.html": {
+    "resources": [
+      "img/back.png",
+      "css/info.css",
+      "css/mui.min.css",
+      "js/jquery.qrcode.min.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "img/bg1.jpg"
+    ]
+  },
+  "connect.html": {
+    "resources": [
+      "css/info.css",
+      "img/back.png",
+      "css/mui.min.css"
+    ]
+  },
+  "help.html": {
+    "resources": [
+      "img/back.png",
+      "css/info.css",
+      "main.html",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  }
+}

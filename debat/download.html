@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>您身边最全面的金融服务</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/info.css"/>
+    <style>
+    	.mui-slider-item img{
+    		height:200px;
+    	}
+    	#menu {
+		    color: #fff;
+		    margin-top: 5px;
+	    }
+	    #myframe{
+	    	    text-align: center;
+    margin-top: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 350px;
+    background: #fff;
+    padding-top: 50px;
+	    }
+	    .mui-content{
+	    	background: #efeff4;
+	    }
+	    body{
+	    	background: #efeff4;
+	    }
+    </style>
+</head> 
+<body > 
+	<header class="mui-bar mui-bar-nav">
+		<a class="sb-back back" style="cursor: pointer;" href="#" onclick="backTo()" title="返回"></a>
+		<!--<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a>-->
+		<!--<h1 class="mui-title proName">钱易融</h1>-->
+		<h1 class="mui-title">易借宝</h1>
+	</header>
+	<div class="mui-content">
+		<div id="myframe">
+			<div id="qrcode" style=""></div>
+			<div style="margin-top:30px;color: #b1a9a9;">扫一扫上面的二维码图案，下载APP</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<!--<script src="js/mui.min.js"></script>-->
+	<script src="js/jquery.qrcode.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+	$(document).ready(function(){
+		//http://www.ryjbb.com:8090/apk/qyr.apk
+		$("#qrcode").qrcode({
+					 	text: getUrl+"qyr/register1.html",
+				        width: 200,
+				        height: 200,
+				        colorDark : '#000000', //前景色
+				        colorLight : '#ffffff'  //背景色
+ 						});
+	});
+	
+
+	</script>
+</body>
+</html>
